@@ -6,9 +6,9 @@ const Name = () => {
   const { name } = query;
   return (
     <div>
-      <p>Hello {name}</p>
+      <p>Hello {name}. This is a cool app!</p>
     </div>
   );
-}; 
+};
 
 export default Name;
