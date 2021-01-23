@@ -10,6 +10,9 @@ const Navigation = () => {
                 <Link href='/about'>
                     <a>About</a>
                 </Link>
+                <Link href='/products'>
+                    <a>Products</a>
+                </Link>
             </ul>
         </div>
      );

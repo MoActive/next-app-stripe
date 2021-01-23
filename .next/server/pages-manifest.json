@@ -1,9 +1,7 @@
 {
-  "/[name]": "pages/[name].html",
   "/_app": "pages/_app.js",
-  "/about": "pages/about.html",
-  "/": "pages/index.html",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/products": "pages/products.js",
+  "/": "pages/index.js"
 }
