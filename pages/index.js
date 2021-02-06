@@ -19,7 +19,7 @@ const HomePage = (props) => {
                 <h2>{product.title}</h2>
               </a>
             </Link>
-            {/* <img src={image?.file.url} /> */}
+            <img src={image?.file.url} />
           </div>
         );
       })}
