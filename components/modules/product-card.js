@@ -1,15 +1,16 @@
-const ProductCard = ({ products }) => {
+const ProductCard = ({ title, image, price }) => {
   return (
-    <div>
-      {products.map((product) => {
-        const { name, price } = product;
-        return (
-          <div>
-            <h2>{name}</h2>
-            <p>{price}</p>
-          </div>
-        );
-      })}
+    <div className="columns">
+      <div className="column">
+        <h2>{title}</h2>
+        <p>{price}</p>
+        <figure className='image'>
+          <img src={image?.fields.file.url} />
+        </figure>
+      </div>
+      <div className="column">
+        <p>dawdaw</p>
+      </div>
     </div>
   );
 };

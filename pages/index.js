@@ -8,21 +8,28 @@ const HomePage = (props) => {
 
   return (
     <div>
-      <h1>Home page</h1>
+      <section className='section'>
+        <h1>Home page</h1>
+      </section>
 
-      {products.map((product, i) => {
-        const image = product.image?.fields;
-        return (
-          <div key={product.slug}>
-            <Link href={product.slug}>
-              <a>
-                <h2>{product.title}</h2>
-              </a>
-            </Link>
-            <img src={image?.file.url} />
-          </div>
-        );
-      })}
+      <section className='section'>
+        <div className='columns'>
+          {products.map((product, i) => {
+            const image = product.image?.fields;
+
+            return (
+              <div className='column' key={product.slug}>
+                <Link href={product.slug}>
+                  <a>
+                    <h2>{product.title}</h2>
+                    {image && <img src={image?.file.url} />}
+                  </a>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+      </section>
     </div>
   );
 };

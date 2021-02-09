@@ -1,12 +1,13 @@
 import { Client, createClient } from 'contentful';
+import ProductCard from '../components/modules/product-card';
 
 const Slug = (props) => {
   console.log(props);
   const { product } = props;
   return (
-    <>
-      <h2>{product.title}</h2>
-    </>
+    <section className="section">
+      <ProductCard {...product} />
+    </section>
   );
 };
 
