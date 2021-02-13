@@ -2,12 +2,12 @@ import Navigation from '../modules/navigation';
 
 const PageComponent = ({ Component, pageProps }) => {
   return (
-    <section className='section'>
-      <div className='container'>
-        <Navigation />
+    <div className='container'>
+      <Navigation />
+      <section className='is-full-height'>
         <Component {...pageProps} />
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

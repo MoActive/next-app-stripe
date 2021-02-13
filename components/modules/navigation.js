@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 const Navigation = () => {
   return (
-    <div>
+    <div className='navigation'>
       <nav className='navbar' role='navigation' aria-label='main navigation'>
         <div className='navbar-brand'>
-          <Link href="/">
+          <Link href='/'>
             <a className='navbar-item'>
               <img
                 src='https://bulma.io/images/bulma-logo.png'
