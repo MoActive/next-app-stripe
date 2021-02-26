@@ -1,5 +1,6 @@
 import { Client, createClient } from 'contentful';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const HomePage = (props) => {
   const { products } = props;
@@ -15,14 +16,26 @@ const HomePage = (props) => {
       <section className='section'>
         <div className='columns'>
           {products.map((product, i) => {
-            const image = product.image?.fields;
+              const image = product.image?.fields;
+
 
             return (
               <div className='column' key={product.slug}>
                 <Link href={product.slug}>
                   <a>
                     <h2>{product.title}</h2>
-                    {image && <img src={image?.file.url} />}
+
+                    {image && (
+                      <Image
+                        src={'http:' + image?.file.url}
+                        src
+                        alt={image?.file.fileName}
+                        layout='responsive'
+                        width="500"
+                        height="500"
+                        srcSet
+                      />
+                    )}
                   </a>
                 </Link>
               </div>
