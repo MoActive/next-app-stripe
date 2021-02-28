@@ -1,6 +1,14 @@
-import { Client, createClient } from 'contentful';
+import { createClient } from 'contentful';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from '../components/image';
+
+export enum ImageSizes {
+  ExtraSmall = 250,
+  Small = 500,
+  Medium = 1000,
+  Large = 1500,
+  ExtraLarge = 2000,
+}
 
 const HomePage = (props) => {
   const { products } = props;
@@ -27,11 +35,12 @@ const HomePage = (props) => {
 
                     {image && (
                       <Image
-                        src={'http:' + image?.file.url}
+                        src={image?.file.url}
                         alt={image?.file.fileName}
-                        layout='responsive'
-                        width="500"
-                        height="500"
+                        srcSet={[ImageSizes.Small, ImageSizes.Medium]}
+                        eager={false}
+                        width="200"
+                        height="200"
                       />
                     )}
                   </a>
