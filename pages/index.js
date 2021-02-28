@@ -28,12 +28,10 @@ const HomePage = (props) => {
                     {image && (
                       <Image
                         src={'http:' + image?.file.url}
-                        src
                         alt={image?.file.fileName}
                         layout='responsive'
                         width="500"
                         height="500"
-                        srcSet
                       />
                     )}
                   </a>
