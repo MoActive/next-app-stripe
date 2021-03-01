@@ -1,4 +1,13 @@
 import Link from 'next/link';
+import Image from '../image';
+
+export enum ImageSizes {
+  ExtraSmall = 250,
+  Small = 500,
+  Medium = 1000,
+  Large = 1500,
+  ExtraLarge = 2000,
+}
 
 const Navigation = () => {
   return (
@@ -7,10 +16,13 @@ const Navigation = () => {
         <div className='navbar-brand'>
           <Link href='/'>
             <a className='navbar-item'>
-              <img
+              <Image
                 src='https://bulma.io/images/bulma-logo.png'
-                width='112'
-                height='28'
+                alt="Logo"
+                srcSet={[ImageSizes.Small, ImageSizes.Medium]}
+                eager={false}
+                width='200'
+                height='200'
               />
             </a>
           </Link>
